@@ -1,0 +1,53 @@
+# your_data.yaml
+
+# Dataset
+train: D:/X_View_Refreshed_Project/YOLO_Format_Dataset/Tiled_Dataset/Military_Tiled_Split_dataset/Train/images  # Path to training images directory
+val: D:/X_View_Refreshed_Project/YOLO_Format_Dataset/Tiled_Dataset/Military_Tiled_Split_dataset/Valid/images # Path to validation images directory
+nc: 17  # Number of classes
+names:   ["Fixed-wing Aircraft",
+           "Small Aircraft",
+           "Passenger/Cargo Plane",
+           "Helicopter",
+           "Bus",
+           "Tank car",
+           "Truck Tractor w/ Box Trailer",
+           "Military Vessel",
+           "Ferry",
+           "Yacht",
+           "Hut/Tent",
+           "Shed",
+           "Aircraft Hangar",
+           "Damaged Building",
+           "Construction Site",
+           "Helipad",
+           "Tower"]
+
+# Model
+architecture: yolov5s  # YOLO model architecture (options: yolov5s, yolov5m, yolov5l, yolov5x)
+pretrained: true  # Use pretrained weights or not
+
+# Training
+batch_size: 8  # Batch size
+epochs: 100  # Number of training epochs
+weights: 'D:/X_View_Refreshed_Project/yolo8x_adam.pt'  # Path to pretrained weights (if not using the default weights)
+img_size: 640  # Input image size
+device: 'cpu'  # GPU device (set to 0 for the first GPU, or 'cpu' for CPU)
+
+# Augmentation
+mosaic: 0.5  # Mosaic augmentation probability
+mixup: 0.5  # MixUp augmentation probability
+
+# Precision
+precision: 16  # Training precision (16 or 32 bits)
+
+# Learning Rate Scheduler
+lr0: 0.01  # Initial learning rate
+lrf: 0.2  # Final learning rate factor
+momentum: 0.937  # SGD momentum
+weight_decay: 0.0005  # Weight decay
+
+# Data Loader
+num_workers: 8  # Number of data loader workers
+
+# Logging
+name: military_xview
