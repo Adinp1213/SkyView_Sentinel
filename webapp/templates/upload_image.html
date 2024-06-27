@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Login Page{% endblock %}
+{% block content %}
+
+
+<style>
+    .container {
+        position: relative; /* Set container as a relative positioning context */
+        height: 75vh; /* Full viewport height */
+        margin-top: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .overlay {
+        position: absolute; /* Position form absolutely within the container */
+        top: 50%; /* Align form vertically centered */
+        left: 50%; /* Align form horizontally centered */
+        transform: translate(-50%, -50%); /* Center the form exactly */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.493);
+        width: 50%;
+        max-width: 500px; /* Limit form width */
+        border: 1px solid #ddd;
+    }
+
+    h2 {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #ffffff;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #f5f4f4;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+    <div class="container">
+        <div class="overlay">
+            <h2>Aerial Image Analysis</h2>
+            <form class="questions-form" method="post"  action="/get_results/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- detection image -->
+                <label for="image">Image:</label>
+                <!-- <input type="file" id="image" name="image" accept="image/*" required> -->
+                <p><label class="form-control" style="border:outset;cursor: pointer;" for="file" >Upload Image</label></p>
+                <!-- Submit Button -->
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event); showMediaPath();" style="display: none;"></p>
+                <p><img style="background-color: white;" name="image" id="output" height="250" width="250" /></p>
+                <button type="submit">Detect</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+
+
+{% endblock %}

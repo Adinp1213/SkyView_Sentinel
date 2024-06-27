@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Login Page{% endblock %}
+
+
+{% block messages %}
+    {% if messages %}
+        <div style="background-color: #d4edda; border-color: #c3e6cb; color: #155724; padding: 15px; margin-bottom: 20px;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<h2 style = "color: white; margin-top: 20px;">Military Based Aerial Object Detection</h2>
+
+{% endblock %}
+
+
+
+{% block chatbot %}
+<style>
+    #upload-btn {
+            background-color: #28a745;
+            color: white;
+        }
+</style>
+<div style = "align-items: center; margin-top: 100px; color: white;">
+    <a id="upload-btn" class="btn button" href="start_detection">
+        Start Aerial View Image Detection
+    </a>
+</div>
+{% endblock %}
+
