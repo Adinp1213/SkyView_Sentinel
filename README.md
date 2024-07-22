@@ -25,7 +25,7 @@ YOLOv8
   <img src="https://github.com/user-attachments/assets/9745c763-7025-4aca-9d60-4a8ad0e0e209" alt="Results website" width="250">
 </p>
 
-## mAP50 Table
+## Results Table across different classes
 
 | Classes                         | Images | Instances | mAP50 |
 |---------------------------------|--------|-----------|-------|
