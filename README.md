@@ -20,9 +20,9 @@ YOLOv8
 
 ## Detected Objects Results
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/419e4d22-d6d1-494b-9e94-7d990db55a7c" alt="Results website" width="300">
-  <img src="https://github.com/user-attachments/assets/d44bacc8-487d-4bfa-8bc9-d2d77d7d3ceb" alt="Results website" width="300">
-  <img src="https://github.com/user-attachments/assets/9745c763-7025-4aca-9d60-4a8ad0e0e209" alt="Results website" width="300">
+  <img src="https://github.com/user-attachments/assets/419e4d22-d6d1-494b-9e94-7d990db55a7c" alt="Results website" width="250">
+  <img src="https://github.com/user-attachments/assets/d44bacc8-487d-4bfa-8bc9-d2d77d7d3ceb" alt="Results website" width="250">
+  <img src="https://github.com/user-attachments/assets/9745c763-7025-4aca-9d60-4a8ad0e0e209" alt="Results website" width="250">
 </p>
 
 ## mAP50 Table
